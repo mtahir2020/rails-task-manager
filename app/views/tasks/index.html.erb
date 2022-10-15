@@ -3,9 +3,11 @@
 <ol>
   <% @tasks.each do |task| %>
     <li>
-    <p><%= task.title %></p>
-    <p><%= task.details %></p>
-    <p>Completed: <%= task.completed %></p>
+    <p><%= link_to task.title, task_path(task) %></p>
     </li>
   <% end %>
 </ol>
+
+
+<%# <p><%= task.details %>
+    <%# <p>Completed: <%= task.completed %>
